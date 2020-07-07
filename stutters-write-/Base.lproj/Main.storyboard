@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QT8-fr-7jz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input View Controller-->
+        <scene sceneID="46N-mI-yLT">
+            <objects>
+                <viewController id="QT8-fr-7jz" customClass="InputViewController" customModule="stutters_write_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UOK-5a-dQR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="伝えたいことを入力してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-cC-j51">
+                                <rect key="frame" x="77" y="234" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A7J-Od-LIh" customClass="PlaceHolderTextView" customModule="stutters_write_" customModuleProvider="target">
+                                <rect key="frame" x="30" y="308" width="354" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="Wtd-ha-qu9"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="伝えたいことを入力してください"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5EQ-du-AOh">
+                                <rect key="frame" x="157" y="669" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="69G-8D-RoA"/>
+                                </constraints>
+                                <state key="normal" title="表示">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapDisplayButton:" destination="QT8-fr-7jz" eventType="touchUpInside" id="Gor-fS-DDS"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YHg-gI-WtD" userLabel="TabView">
+                                <rect key="frame" x="60" y="536" width="294" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAZ-Ag-Ybp">
+                                        <rect key="frame" x="5" y="5" width="142" height="44"/>
+                                        <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.56431819510000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="縦書き">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTapTategaki:" destination="QT8-fr-7jz" eventType="touchUpInside" id="CTb-fl-vG1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZC-Yp-as6">
+                                        <rect key="frame" x="147" y="5" width="142" height="44"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="横書き">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onTapYokogaki:" destination="QT8-fr-7jz" eventType="touchUpInside" id="lom-wV-Yj7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="AZC-Yp-as6" secondAttribute="bottom" constant="5" id="9Ti-uI-SQM"/>
+                                    <constraint firstAttribute="height" constant="54" id="DV7-uI-D1T"/>
+                                    <constraint firstItem="XAZ-Ag-Ybp" firstAttribute="top" secondItem="YHg-gI-WtD" secondAttribute="top" constant="5" id="NjU-iv-CQo"/>
+                                    <constraint firstItem="XAZ-Ag-Ybp" firstAttribute="leading" secondItem="YHg-gI-WtD" secondAttribute="leading" constant="5" id="bSB-kD-eVY"/>
+                                    <constraint firstItem="AZC-Yp-as6" firstAttribute="leading" secondItem="XAZ-Ag-Ybp" secondAttribute="trailing" id="dWA-b3-YHZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XAZ-Ag-Ybp" secondAttribute="bottom" constant="5" id="k1k-Wl-BJD"/>
+                                    <constraint firstItem="AZC-Yp-as6" firstAttribute="top" secondItem="YHg-gI-WtD" secondAttribute="top" constant="5" id="tcq-iY-LBw"/>
+                                    <constraint firstAttribute="trailing" secondItem="AZC-Yp-as6" secondAttribute="trailing" constant="5" id="zjq-qY-IR3"/>
+                                    <constraint firstItem="AZC-Yp-as6" firstAttribute="width" secondItem="XAZ-Ag-Ybp" secondAttribute="width" id="zl8-nE-bjW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="A7J-Od-LIh" firstAttribute="top" secondItem="XWZ-cC-j51" secondAttribute="bottom" constant="53" id="0Hd-5R-Wb3"/>
+                            <constraint firstItem="YHg-gI-WtD" firstAttribute="top" secondItem="A7J-Od-LIh" secondAttribute="bottom" constant="48" id="2ej-Zx-J4C"/>
+                            <constraint firstItem="XWZ-cC-j51" firstAttribute="centerX" secondItem="UOK-5a-dQR" secondAttribute="centerX" id="4Oe-pP-9LS"/>
+                            <constraint firstItem="g8I-jr-oi8" firstAttribute="trailing" secondItem="YHg-gI-WtD" secondAttribute="trailing" constant="60" id="ZUf-KU-KGS"/>
+                            <constraint firstItem="A7J-Od-LIh" firstAttribute="leading" secondItem="g8I-jr-oi8" secondAttribute="leading" constant="30" id="fbE-2B-gBv"/>
+                            <constraint firstItem="5EQ-du-AOh" firstAttribute="top" secondItem="YHg-gI-WtD" secondAttribute="bottom" constant="79" id="mvR-va-qJF"/>
+                            <constraint firstItem="5EQ-du-AOh" firstAttribute="centerX" secondItem="UOK-5a-dQR" secondAttribute="centerX" id="pJl-LS-iAq"/>
+                            <constraint firstItem="XWZ-cC-j51" firstAttribute="top" secondItem="g8I-jr-oi8" secondAttribute="top" constant="190" id="qdE-EI-PP3"/>
+                            <constraint firstItem="g8I-jr-oi8" firstAttribute="trailing" secondItem="A7J-Od-LIh" secondAttribute="trailing" constant="30" id="tbD-hc-0vc"/>
+                            <constraint firstItem="YHg-gI-WtD" firstAttribute="leading" secondItem="g8I-jr-oi8" secondAttribute="leading" constant="60" id="tfu-sb-aq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="g8I-jr-oi8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r6e-Cw-Vy6"/>
+                    <connections>
+                        <outlet property="displayButton" destination="5EQ-du-AOh" id="tDo-IP-eBk"/>
+                        <outlet property="tabView" destination="YHg-gI-WtD" id="C1P-Bq-RVO"/>
+                        <outlet property="tategakiButton" destination="XAZ-Ag-Ybp" id="HH9-PX-TKN"/>
+                        <outlet property="textView" destination="A7J-Od-LIh" id="c4j-e2-5TG"/>
+                        <outlet property="yokogakiButton" destination="AZC-Yp-as6" id="tUB-Nj-NsK"/>
+                        <segue destination="6Ah-4R-7eC" kind="presentation" identifier="tategaki" id="iFp-yz-Eb3"/>
+                        <segue destination="Fn0-Ie-kdF" kind="presentation" identifier="yokogaki" id="Ab4-gO-Fna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgB-XU-7h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3400.0000000000005" y="139.95535714285714"/>
+        </scene>
+        <!--Yokogaki Result View Controller-->
+        <scene sceneID="nCf-DV-N5z">
+            <objects>
+                <viewController id="Fn0-Ie-kdF" customClass="YokogakiResultViewController" customModule="stutters_write_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qme-ou-gjC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g58-I0-bQG" userLabel="Content View">
+                                <rect key="frame" x="5" y="5" width="404" height="798"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1f7-qn-wC9" firstAttribute="bottom" secondItem="g58-I0-bQG" secondAttribute="bottom" constant="5" id="KLe-vI-zpd"/>
+                            <constraint firstItem="g58-I0-bQG" firstAttribute="leading" secondItem="1f7-qn-wC9" secondAttribute="leading" constant="5" id="PCw-bl-jC9"/>
+                            <constraint firstItem="1f7-qn-wC9" firstAttribute="trailing" secondItem="g58-I0-bQG" secondAttribute="trailing" constant="5" id="ip3-rV-Chr"/>
+                            <constraint firstItem="g58-I0-bQG" firstAttribute="top" secondItem="1f7-qn-wC9" secondAttribute="top" constant="5" id="szU-YV-ix8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1f7-qn-wC9"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="g58-I0-bQG" id="Oan-Ic-EVs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fp-eI-b0K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4550.7246376811599" y="510.9375"/>
+        </scene>
+        <!--Tategaki Result View Controller-->
+        <scene sceneID="gVP-M9-umo">
+            <objects>
+                <viewController storyboardIdentifier="resultView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6Ah-4R-7eC" customClass="TategakiResultViewController" customModule="stutters_write_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xaP-jY-A2X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y3a-Yi-Cxt" userLabel="Content VIew">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y3a-Yi-Cxt" firstAttribute="top" secondItem="xaP-jY-A2X" secondAttribute="top" id="ctI-dH-Cfw"/>
+                            <constraint firstItem="y3a-Yi-Cxt" firstAttribute="leading" secondItem="xaP-jY-A2X" secondAttribute="leading" id="jz4-MX-q1Z"/>
+                            <constraint firstAttribute="trailing" secondItem="y3a-Yi-Cxt" secondAttribute="trailing" id="lzX-Hd-jE5"/>
+                            <constraint firstAttribute="bottom" secondItem="y3a-Yi-Cxt" secondAttribute="bottom" id="qRF-jS-dUJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yCd-gh-FvZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="y3a-Yi-Cxt" id="m6n-rx-dd3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kcx-Qs-JTn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4529" y="-424"/>
+        </scene>
+    </scenes>
+</document>

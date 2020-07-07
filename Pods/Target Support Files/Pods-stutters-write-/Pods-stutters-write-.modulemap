@@ -1,0 +1,6 @@
+framework module Pods_stutters_write_ {
+  umbrella header "Pods-stutters-write--umbrella.h"
+
+  export *
+  module * { export * }
+}

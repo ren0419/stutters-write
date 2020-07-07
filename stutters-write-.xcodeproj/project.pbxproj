@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1EEED97E43530E8A0EDC56AD /* Pods_stutters_write_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34617FA77BE22DDAECD690D /* Pods_stutters_write_.framework */; };
+		5E8C6D48E4B1CDD3D8F03B03 /* Pods_stutters_write__stutters_write_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */; };
+		A5606A1624B0CB2000C661CD /* TategakiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5606A1524B0CB2000C661CD /* TategakiResultViewController.swift */; };
+		A5606A1824B2BA9A00C661CD /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */; };
+		A56F3F0224B2DE6100F441A8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0124B2DE6100F441A8 /* UIColor+.swift */; };
+		A56F3F0424B2E6D800F441A8 /* YokogakiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0324B2E6D800F441A8 /* YokogakiResultViewController.swift */; };
+		A586D8F924B0C16F0005E44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D8F824B0C16F0005E44C /* AppDelegate.swift */; };
+		A586D8FB24B0C16F0005E44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D8FA24B0C16F0005E44C /* SceneDelegate.swift */; };
+		A586D90024B0C16F0005E44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A586D8FE24B0C16F0005E44C /* Main.storyboard */; };
+		A586D90224B0C1700005E44C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A586D90124B0C1700005E44C /* Assets.xcassets */; };
+		A586D90524B0C1700005E44C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A586D90324B0C1700005E44C /* LaunchScreen.storyboard */; };
+		A586D91024B0C1700005E44C /* stutters_write_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D90F24B0C1700005E44C /* stutters_write_Tests.swift */; };
+		A586D91B24B0C1700005E44C /* stutters_write_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D91A24B0C1700005E44C /* stutters_write_UITests.swift */; };
+		A586D92C24B0C82E0005E44C /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D92B24B0C82E0005E44C /* InputViewController.swift */; };
+		E372C2DC4B3D5B843E938F11 /* Pods_stutters_write_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0044E57610D1917610E75FCD /* Pods_stutters_write_Tests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A586D90C24B0C1700005E44C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A586D8ED24B0C16F0005E44C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A586D8F424B0C16F0005E44C;
+			remoteInfo = "stutters-write-";
+		};
+		A586D91724B0C1700005E44C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A586D8ED24B0C16F0005E44C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A586D8F424B0C16F0005E44C;
+			remoteInfo = "stutters-write-";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0044E57610D1917610E75FCD /* Pods_stutters_write_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stutters_write_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B9E109B7F13FC4234A1E76 /* Pods-stutters-write-.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-.release.xcconfig"; path = "Target Support Files/Pods-stutters-write-/Pods-stutters-write-.release.xcconfig"; sourceTree = "<group>"; };
+		50944E71C8BC9E4664A7E9FF /* Pods-stutters-write--stutters-write-UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write--stutters-write-UITests.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		59325FFBF47EAF9F463CAB7A /* Pods-stutters-write-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-Tests.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write-Tests/Pods-stutters-write-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		77BB18532A2241A99D60799F /* Pods-stutters-write-.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write-/Pods-stutters-write-.debug.xcconfig"; sourceTree = "<group>"; };
+		83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stutters_write__stutters_write_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5606A1524B0CB2000C661CD /* TategakiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TategakiResultViewController.swift; sourceTree = "<group>"; };
+		A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		A56F3F0124B2DE6100F441A8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		A56F3F0324B2E6D800F441A8 /* YokogakiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YokogakiResultViewController.swift; sourceTree = "<group>"; };
+		A586D8F524B0C16F0005E44C /* stutters-write-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stutters-write-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A586D8F824B0C16F0005E44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A586D8FA24B0C16F0005E44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A586D8FF24B0C16F0005E44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A586D90124B0C1700005E44C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A586D90424B0C1700005E44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A586D90624B0C1700005E44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A586D90B24B0C1700005E44C /* stutters-write-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stutters-write-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A586D90F24B0C1700005E44C /* stutters_write_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stutters_write_Tests.swift; sourceTree = "<group>"; };
+		A586D91124B0C1700005E44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A586D91624B0C1700005E44C /* stutters-write-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stutters-write-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A586D91A24B0C1700005E44C /* stutters_write_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stutters_write_UITests.swift; sourceTree = "<group>"; };
+		A586D91C24B0C1700005E44C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A586D92B24B0C82E0005E44C /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		ACDFC2041CF219CA33980D4C /* Pods-stutters-write-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-Tests.release.xcconfig"; path = "Target Support Files/Pods-stutters-write-Tests/Pods-stutters-write-Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E34617FA77BE22DDAECD690D /* Pods_stutters_write_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stutters_write_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE906B83C035BF7114B7BBF3 /* Pods-stutters-write--stutters-write-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write--stutters-write-UITests.release.xcconfig"; path = "Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A586D8F224B0C16F0005E44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EEED97E43530E8A0EDC56AD /* Pods_stutters_write_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A586D90824B0C1700005E44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E372C2DC4B3D5B843E938F11 /* Pods_stutters_write_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A586D91324B0C1700005E44C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E8C6D48E4B1CDD3D8F03B03 /* Pods_stutters_write__stutters_write_UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		12F8C46F1D0E085C1C7409A3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E34617FA77BE22DDAECD690D /* Pods_stutters_write_.framework */,
+				83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */,
+				0044E57610D1917610E75FCD /* Pods_stutters_write_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F3C15E31BB8622781BAFE24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				77BB18532A2241A99D60799F /* Pods-stutters-write-.debug.xcconfig */,
+				27B9E109B7F13FC4234A1E76 /* Pods-stutters-write-.release.xcconfig */,
+				50944E71C8BC9E4664A7E9FF /* Pods-stutters-write--stutters-write-UITests.debug.xcconfig */,
+				EE906B83C035BF7114B7BBF3 /* Pods-stutters-write--stutters-write-UITests.release.xcconfig */,
+				59325FFBF47EAF9F463CAB7A /* Pods-stutters-write-Tests.debug.xcconfig */,
+				ACDFC2041CF219CA33980D4C /* Pods-stutters-write-Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A5606A1924B2BB7A00C661CD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */,
+				A56F3F0124B2DE6100F441A8 /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		A586D8EC24B0C16F0005E44C = {
+			isa = PBXGroup;
+			children = (
+				A586D8F724B0C16F0005E44C /* stutters-write- */,
+				A586D90E24B0C1700005E44C /* stutters-write-Tests */,
+				A586D91924B0C1700005E44C /* stutters-write-UITests */,
+				A586D8F624B0C16F0005E44C /* Products */,
+				1F3C15E31BB8622781BAFE24 /* Pods */,
+				12F8C46F1D0E085C1C7409A3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A586D8F624B0C16F0005E44C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A586D8F524B0C16F0005E44C /* stutters-write-.app */,
+				A586D90B24B0C1700005E44C /* stutters-write-Tests.xctest */,
+				A586D91624B0C1700005E44C /* stutters-write-UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A586D8F724B0C16F0005E44C /* stutters-write- */ = {
+			isa = PBXGroup;
+			children = (
+				A586D8F824B0C16F0005E44C /* AppDelegate.swift */,
+				A586D8FA24B0C16F0005E44C /* SceneDelegate.swift */,
+				A586D8FE24B0C16F0005E44C /* Main.storyboard */,
+				A586D90124B0C1700005E44C /* Assets.xcassets */,
+				A586D90324B0C1700005E44C /* LaunchScreen.storyboard */,
+				A586D90624B0C1700005E44C /* Info.plist */,
+				A5606A1924B2BB7A00C661CD /* Extension */,
+				A586D92824B0C5850005E44C /* Controller */,
+			);
+			path = "stutters-write-";
+			sourceTree = "<group>";
+		};
+		A586D90E24B0C1700005E44C /* stutters-write-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A586D90F24B0C1700005E44C /* stutters_write_Tests.swift */,
+				A586D91124B0C1700005E44C /* Info.plist */,
+			);
+			path = "stutters-write-Tests";
+			sourceTree = "<group>";
+		};
+		A586D91924B0C1700005E44C /* stutters-write-UITests */ = {
+			isa = PBXGroup;
+			children = (
+				A586D91A24B0C1700005E44C /* stutters_write_UITests.swift */,
+				A586D91C24B0C1700005E44C /* Info.plist */,
+			);
+			path = "stutters-write-UITests";
+			sourceTree = "<group>";
+		};
+		A586D92824B0C5850005E44C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A586D92B24B0C82E0005E44C /* InputViewController.swift */,
+				A5606A1524B0CB2000C661CD /* TategakiResultViewController.swift */,
+				A56F3F0324B2E6D800F441A8 /* YokogakiResultViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A586D8F424B0C16F0005E44C /* stutters-write- */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A586D91F24B0C1700005E44C /* Build configuration list for PBXNativeTarget "stutters-write-" */;
+			buildPhases = (
+				54E9E821081386EBAA1F4CB0 /* [CP] Check Pods Manifest.lock */,
+				A586D8F124B0C16F0005E44C /* Sources */,
+				A586D8F224B0C16F0005E44C /* Frameworks */,
+				A586D8F324B0C16F0005E44C /* Resources */,
+				FC15B46CCA29A4B8F9F90CED /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "stutters-write-";
+			productName = "stutters-write-";
+			productReference = A586D8F524B0C16F0005E44C /* stutters-write-.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A586D90A24B0C1700005E44C /* stutters-write-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A586D92224B0C1700005E44C /* Build configuration list for PBXNativeTarget "stutters-write-Tests" */;
+			buildPhases = (
+				FEDFC4AFBE1C66E5083E16C3 /* [CP] Check Pods Manifest.lock */,
+				A586D90724B0C1700005E44C /* Sources */,
+				A586D90824B0C1700005E44C /* Frameworks */,
+				A586D90924B0C1700005E44C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A586D90D24B0C1700005E44C /* PBXTargetDependency */,
+			);
+			name = "stutters-write-Tests";
+			productName = "stutters-write-Tests";
+			productReference = A586D90B24B0C1700005E44C /* stutters-write-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A586D91524B0C1700005E44C /* stutters-write-UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A586D92524B0C1700005E44C /* Build configuration list for PBXNativeTarget "stutters-write-UITests" */;
+			buildPhases = (
+				6868FAC0661A61FD457DE92F /* [CP] Check Pods Manifest.lock */,
+				A586D91224B0C1700005E44C /* Sources */,
+				A586D91324B0C1700005E44C /* Frameworks */,
+				A586D91424B0C1700005E44C /* Resources */,
+				1E29DCD0F13DD4220592A836 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A586D91824B0C1700005E44C /* PBXTargetDependency */,
+			);
+			name = "stutters-write-UITests";
+			productName = "stutters-write-UITests";
+			productReference = A586D91624B0C1700005E44C /* stutters-write-UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A586D8ED24B0C16F0005E44C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = katahiraren;
+				TargetAttributes = {
+					A586D8F424B0C16F0005E44C = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					A586D90A24B0C1700005E44C = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = A586D8F424B0C16F0005E44C;
+					};
+					A586D91524B0C1700005E44C = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = A586D8F424B0C16F0005E44C;
+					};
+				};
+			};
+			buildConfigurationList = A586D8F024B0C16F0005E44C /* Build configuration list for PBXProject "stutters-write-" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A586D8EC24B0C16F0005E44C;
+			productRefGroup = A586D8F624B0C16F0005E44C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A586D8F424B0C16F0005E44C /* stutters-write- */,
+				A586D90A24B0C1700005E44C /* stutters-write-Tests */,
+				A586D91524B0C1700005E44C /* stutters-write-UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A586D8F324B0C16F0005E44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A586D90524B0C1700005E44C /* LaunchScreen.storyboard in Resources */,
+				A586D90224B0C1700005E44C /* Assets.xcassets in Resources */,
+				A586D90024B0C16F0005E44C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A586D90924B0C1700005E44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A586D91424B0C1700005E44C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E29DCD0F13DD4220592A836 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		54E9E821081386EBAA1F4CB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stutters-write--checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6868FAC0661A61FD457DE92F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stutters-write--stutters-write-UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC15B46CCA29A4B8F9F90CED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write-/Pods-stutters-write--frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write-/Pods-stutters-write--frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stutters-write-/Pods-stutters-write--frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEDFC4AFBE1C66E5083E16C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stutters-write-Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A586D8F124B0C16F0005E44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A56F3F0424B2E6D800F441A8 /* YokogakiResultViewController.swift in Sources */,
+				A586D92C24B0C82E0005E44C /* InputViewController.swift in Sources */,
+				A586D8F924B0C16F0005E44C /* AppDelegate.swift in Sources */,
+				A586D8FB24B0C16F0005E44C /* SceneDelegate.swift in Sources */,
+				A5606A1624B0CB2000C661CD /* TategakiResultViewController.swift in Sources */,
+				A5606A1824B2BA9A00C661CD /* PlaceHolderTextView.swift in Sources */,
+				A56F3F0224B2DE6100F441A8 /* UIColor+.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A586D90724B0C1700005E44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A586D91024B0C1700005E44C /* stutters_write_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A586D91224B0C1700005E44C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A586D91B24B0C1700005E44C /* stutters_write_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A586D90D24B0C1700005E44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A586D8F424B0C16F0005E44C /* stutters-write- */;
+			targetProxy = A586D90C24B0C1700005E44C /* PBXContainerItemProxy */;
+		};
+		A586D91824B0C1700005E44C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A586D8F424B0C16F0005E44C /* stutters-write- */;
+			targetProxy = A586D91724B0C1700005E44C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A586D8FE24B0C16F0005E44C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A586D8FF24B0C16F0005E44C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A586D90324B0C1700005E44C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A586D90424B0C1700005E44C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A586D91D24B0C1700005E44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A586D91E24B0C1700005E44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A586D92024B0C1700005E44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77BB18532A2241A99D60799F /* Pods-stutters-write-.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6492TQ2N73;
+				INFOPLIST_FILE = "stutters-write-/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "katahira.stutters-write-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A586D92124B0C1700005E44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27B9E109B7F13FC4234A1E76 /* Pods-stutters-write-.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6492TQ2N73;
+				INFOPLIST_FILE = "stutters-write-/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "katahira.stutters-write-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A586D92324B0C1700005E44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59325FFBF47EAF9F463CAB7A /* Pods-stutters-write-Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6492TQ2N73;
+				INFOPLIST_FILE = "stutters-write-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "katahira.stutters-write-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stutters-write-.app/stutters-write-";
+			};
+			name = Debug;
+		};
+		A586D92424B0C1700005E44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACDFC2041CF219CA33980D4C /* Pods-stutters-write-Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6492TQ2N73;
+				INFOPLIST_FILE = "stutters-write-Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "katahira.stutters-write-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stutters-write-.app/stutters-write-";
+			};
+			name = Release;
+		};
+		A586D92624B0C1700005E44C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50944E71C8BC9E4664A7E9FF /* Pods-stutters-write--stutters-write-UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6492TQ2N73;
+				INFOPLIST_FILE = "stutters-write-UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "katahira.stutters-write-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "stutters-write-";
+			};
+			name = Debug;
+		};
+		A586D92724B0C1700005E44C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE906B83C035BF7114B7BBF3 /* Pods-stutters-write--stutters-write-UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6492TQ2N73;
+				INFOPLIST_FILE = "stutters-write-UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "katahira.stutters-write-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "stutters-write-";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A586D8F024B0C16F0005E44C /* Build configuration list for PBXProject "stutters-write-" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A586D91D24B0C1700005E44C /* Debug */,
+				A586D91E24B0C1700005E44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A586D91F24B0C1700005E44C /* Build configuration list for PBXNativeTarget "stutters-write-" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A586D92024B0C1700005E44C /* Debug */,
+				A586D92124B0C1700005E44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A586D92224B0C1700005E44C /* Build configuration list for PBXNativeTarget "stutters-write-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A586D92324B0C1700005E44C /* Debug */,
+				A586D92424B0C1700005E44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A586D92524B0C1700005E44C /* Build configuration list for PBXNativeTarget "stutters-write-UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A586D92624B0C1700005E44C /* Debug */,
+				A586D92724B0C1700005E44C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A586D8ED24B0C16F0005E44C /* Project object */;
+}

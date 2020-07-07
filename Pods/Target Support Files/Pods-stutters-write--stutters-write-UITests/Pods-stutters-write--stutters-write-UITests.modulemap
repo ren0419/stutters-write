@@ -1,0 +1,6 @@
+framework module Pods_stutters_write__stutters_write_UITests {
+  umbrella header "Pods-stutters-write--stutters-write-UITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
