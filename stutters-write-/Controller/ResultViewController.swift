@@ -8,9 +8,10 @@
 
 import UIKit
 
-class YokogakiResultViewController: UIViewController {
+class ResultViewController: UIViewController {
     @IBOutlet private weak var contentView: UIView!
     var resultText: String?
+    var stringColor: StringColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +28,18 @@ class YokogakiResultViewController: UIViewController {
         displayLabel.numberOfLines = 0
         displayLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         displayLabel.text = resultText
-        self.view.backgroundColor = UIColor.black
-        contentView.backgroundColor = UIColor.black
-        displayLabel.backgroundColor = UIColor.black
-        displayLabel.textColor = UIColor.white
+        self.view.backgroundColor = UIColor.primary
+        contentView.backgroundColor = UIColor.primary
+        displayLabel.backgroundColor = UIColor.primary
+        
+        switch stringColor {
+        case .white:
+            displayLabel.textColor = UIColor.white
+        case .black:
+            displayLabel.textColor = UIColor.black
+        case .none:
+            return
+        }
         contentView.addSubview(displayLabel)
 
     }
