@@ -7,9 +7,7 @@ target 'stutters-write-' do
 
   # Pods for stutters-write-
   
-  pod 'TTTAttributedLabel'
-
-  target 'stutters-write-Tests' do
+    target 'stutters-write-Tests' do
     inherit! :search_paths
     # Pods for testing
   end
