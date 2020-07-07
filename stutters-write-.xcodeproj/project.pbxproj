@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		1EEED97E43530E8A0EDC56AD /* Pods_stutters_write_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34617FA77BE22DDAECD690D /* Pods_stutters_write_.framework */; };
 		5E8C6D48E4B1CDD3D8F03B03 /* Pods_stutters_write__stutters_write_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */; };
-		A5606A1624B0CB2000C661CD /* TategakiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5606A1524B0CB2000C661CD /* TategakiResultViewController.swift */; };
 		A5606A1824B2BA9A00C661CD /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */; };
 		A56F3F0224B2DE6100F441A8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0124B2DE6100F441A8 /* UIColor+.swift */; };
-		A56F3F0424B2E6D800F441A8 /* YokogakiResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0324B2E6D800F441A8 /* YokogakiResultViewController.swift */; };
+		A56F3F0424B2E6D800F441A8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */; };
+		A56F3F0724B43C0500F441A8 /* NotationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0624B43C0500F441A8 /* NotationProperty.swift */; };
+		A56F3F0B24B4635A00F441A8 /* UIViewController+Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0A24B4635A00F441A8 /* UIViewController+Message.swift */; };
 		A586D8F924B0C16F0005E44C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D8F824B0C16F0005E44C /* AppDelegate.swift */; };
 		A586D8FB24B0C16F0005E44C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A586D8FA24B0C16F0005E44C /* SceneDelegate.swift */; };
 		A586D90024B0C16F0005E44C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A586D8FE24B0C16F0005E44C /* Main.storyboard */; };
@@ -48,10 +49,11 @@
 		59325FFBF47EAF9F463CAB7A /* Pods-stutters-write-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-Tests.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write-Tests/Pods-stutters-write-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		77BB18532A2241A99D60799F /* Pods-stutters-write-.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write-/Pods-stutters-write-.debug.xcconfig"; sourceTree = "<group>"; };
 		83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stutters_write__stutters_write_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5606A1524B0CB2000C661CD /* TategakiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TategakiResultViewController.swift; sourceTree = "<group>"; };
 		A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		A56F3F0124B2DE6100F441A8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
-		A56F3F0324B2E6D800F441A8 /* YokogakiResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YokogakiResultViewController.swift; sourceTree = "<group>"; };
+		A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		A56F3F0624B43C0500F441A8 /* NotationProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotationProperty.swift; sourceTree = "<group>"; };
+		A56F3F0A24B4635A00F441A8 /* UIViewController+Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Message.swift"; sourceTree = "<group>"; };
 		A586D8F524B0C16F0005E44C /* stutters-write-.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stutters-write-.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A586D8F824B0C16F0005E44C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A586D8FA24B0C16F0005E44C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,10 +127,19 @@
 		A5606A1924B2BB7A00C661CD /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A56F3F0A24B4635A00F441A8 /* UIViewController+Message.swift */,
 				A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */,
 				A56F3F0124B2DE6100F441A8 /* UIColor+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A56F3F0524B43BE100F441A8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A56F3F0624B43C0500F441A8 /* NotationProperty.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		A586D8EC24B0C16F0005E44C = {
@@ -163,6 +174,7 @@
 				A586D90324B0C1700005E44C /* LaunchScreen.storyboard */,
 				A586D90624B0C1700005E44C /* Info.plist */,
 				A5606A1924B2BB7A00C661CD /* Extension */,
+				A56F3F0524B43BE100F441A8 /* Model */,
 				A586D92824B0C5850005E44C /* Controller */,
 			);
 			path = "stutters-write-";
@@ -190,8 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A586D92B24B0C82E0005E44C /* InputViewController.swift */,
-				A5606A1524B0CB2000C661CD /* TategakiResultViewController.swift */,
-				A56F3F0324B2E6D800F441A8 /* YokogakiResultViewController.swift */,
+				A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -435,12 +446,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A56F3F0424B2E6D800F441A8 /* YokogakiResultViewController.swift in Sources */,
+				A56F3F0424B2E6D800F441A8 /* ResultViewController.swift in Sources */,
+				A56F3F0724B43C0500F441A8 /* NotationProperty.swift in Sources */,
 				A586D92C24B0C82E0005E44C /* InputViewController.swift in Sources */,
 				A586D8F924B0C16F0005E44C /* AppDelegate.swift in Sources */,
 				A586D8FB24B0C16F0005E44C /* SceneDelegate.swift in Sources */,
-				A5606A1624B0CB2000C661CD /* TategakiResultViewController.swift in Sources */,
 				A5606A1824B2BA9A00C661CD /* PlaceHolderTextView.swift in Sources */,
+				A56F3F0B24B4635A00F441A8 /* UIViewController+Message.swift in Sources */,
 				A56F3F0224B2DE6100F441A8 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

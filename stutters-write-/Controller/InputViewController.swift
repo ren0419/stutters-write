@@ -12,14 +12,13 @@ class InputViewController: UIViewController {
     @IBOutlet private weak var textView: PlaceHolderTextView!
     @IBOutlet private weak var displayButton: UIButton!
     @IBOutlet private weak var tabView: UIView!
-    @IBOutlet private weak var tategakiButton: UIButton!
-    @IBOutlet private weak var yokogakiButton: UIButton!
+    @IBOutlet private weak var whiteButton: UIButton!
+    @IBOutlet private weak var blackButton: UIButton!
+    @IBOutlet private weak var saveSwitch: UISwitch!
+    var property = NotationProperty()
     
-    var notationMethod : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         initView()
     }
     
@@ -31,63 +30,52 @@ class InputViewController: UIViewController {
         displayButton.layer.cornerRadius = 10.0
         tabView.layer.cornerRadius = 5.0
         
-        tategakiButton.layer.cornerRadius = 10.0
-        tategakiButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-        yokogakiButton.layer.cornerRadius = 10.0
-        yokogakiButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-        
-        notationMethod = 1
+        whiteButton.layer.cornerRadius = 10.0
+        whiteButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        blackButton.layer.cornerRadius = 10.0
+        blackButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+
     }
     
     
-    @IBAction func onTapTategaki(_ sender: Any) {
-        
-        tategakiButton.isEnabled = false
-        yokogakiButton.isEnabled = true
-        tategakiButton.backgroundColor = UIColor.primary
-        yokogakiButton.backgroundColor = UIColor.notPrimary
-        notationMethod = 1
-        
+    @IBAction func onTapWhite(_ sender: Any) {
+        whiteButton.isEnabled = false
+        blackButton.isEnabled = true
+        whiteButton.backgroundColor = UIColor.primary
+        blackButton.backgroundColor = UIColor.notPrimary
+        property.color = .white
+        property.save = true
     }
     
     
-    @IBAction func onTapYokogaki(_ sender: Any) {
-
-        tategakiButton.isEnabled = true
-        yokogakiButton.isEnabled = true
-        tategakiButton.backgroundColor = UIColor.notPrimary
-        yokogakiButton.backgroundColor = UIColor.primary
-        notationMethod = 2
-
+    @IBAction func onTapBlack(_ sender: Any) {
+        whiteButton.isEnabled = true
+        blackButton.isEnabled = true
+        whiteButton.backgroundColor = UIColor.notPrimary
+        blackButton.backgroundColor = UIColor.primary
+        property.color = .black
+        property.save = false
     }
     
     @IBAction func onTapDisplayButton(_ sender: Any) {
-        
-        switch notationMethod {
-        case 1:
-            performSegue(withIdentifier: "tategaki", sender: nil)
-        case 2:
-            performSegue(withIdentifier: "yokogaki", sender: nil)
-        default:
+        if textView.text == "" {
+            showMessage(title: "伝えたいことを\n入力してください", message: "")
             return
         }
         
+        performSegue(withIdentifier: "result", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let text = textView.text ?? ""
+        let text = textView.text
         
-        switch notationMethod {
-        case 1:
-            let resultVC = segue.destination as! TategakiResultViewController
-            resultVC.resultText = text
-        case 2:
-            let resultVC = segue.destination as! YokogakiResultViewController
-            resultVC.resultText = text
-        default:
-            return
-        }
+        //userdefaultsに保存するメソッド書く
+        print("スイッチは\(saveSwitch.isOn)")
         
+        let resultVC = segue.destination as! ResultViewController
+        resultVC.resultText = text
+        resultVC.stringColor = property.color
+
     }
     
 }
