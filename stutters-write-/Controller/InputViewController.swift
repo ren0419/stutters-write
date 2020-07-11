@@ -16,6 +16,7 @@ class InputViewController: UIViewController {
     @IBOutlet private weak var blackButton: UIButton!
     @IBOutlet private weak var saveSwitch: UISwitch!
     var property = NotationProperty()
+    var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,8 +70,11 @@ class InputViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let text = textView.text
         
-        //userdefaultsに保存するメソッド書く
-        print("スイッチは\(saveSwitch.isOn)")
+        if saveSwitch.isOn {
+        var saves = userDefaults.array(forKey: "saves") as? [String] ?? []
+        saves.append(textView.text)
+        userDefaults.set(saves, forKey: "saves")
+        }
         
         let resultVC = segue.destination as! ResultViewController
         resultVC.resultText = text
