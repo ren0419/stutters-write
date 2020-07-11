@@ -68,18 +68,24 @@ class InputViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let text = textView.text
+        let text = textView.text ?? ""
         
         if saveSwitch.isOn {
-        var saves = userDefaults.array(forKey: "saves") as? [String] ?? []
-        saves.append(textView.text)
-        userDefaults.set(saves, forKey: "saves")
+            saveData(inputText: text, textColor: property.color)
         }
         
         let resultVC = segue.destination as! ResultViewController
         resultVC.resultText = text
         resultVC.stringColor = property.color
 
+    }
+    
+    func saveData(inputText: String, textColor: StringColor) {
+        let saveData = SaveFormat(inputText: inputText, textColor: textColor)
+        print("データ\(saveData)")
+        var saves = userDefaults.array(forKey: "saves") as? [SaveFormat] ?? []
+        saves.append(saveData)
+        userDefaults.set(saves, forKey: "saves")
     }
     
 }

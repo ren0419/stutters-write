@@ -11,7 +11,7 @@ import UIKit
 class SaveFolderViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
-    var saves: [String] = []
+    var saves: [SaveFormat] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +26,7 @@ class SaveFolderViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        saves = UserDefaults.standard.array(forKey: "saves") as! [String]
+        saves = UserDefaults.standard.array(forKey: "saves") as! [SaveFormat]
         self.tableView.reloadData()
     }
 
@@ -41,7 +41,8 @@ extension SaveFolderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell") as! TableViewCell
-        cell.dataSet(displayText: saves[indexPath.row])
+        cell.dataSet(displayText: saves[indexPath.row].inputText)
+        print("ここ\(saves[indexPath.row].dateTransferedString)")
         cell.selectionStyle = .none
         return cell
     }

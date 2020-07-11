@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1EEED97E43530E8A0EDC56AD /* Pods_stutters_write_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E34617FA77BE22DDAECD690D /* Pods_stutters_write_.framework */; };
 		5E8C6D48E4B1CDD3D8F03B03 /* Pods_stutters_write__stutters_write_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */; };
+		A54D17B024B9B79C006EF04D /* SaveFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54D17AF24B9B79C006EF04D /* SaveFormat.swift */; };
 		A5606A1824B2BA9A00C661CD /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */; };
 		A56F3F0224B2DE6100F441A8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0124B2DE6100F441A8 /* UIColor+.swift */; };
 		A56F3F0424B2E6D800F441A8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */; };
@@ -52,6 +53,7 @@
 		59325FFBF47EAF9F463CAB7A /* Pods-stutters-write-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-Tests.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write-Tests/Pods-stutters-write-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		77BB18532A2241A99D60799F /* Pods-stutters-write-.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-.debug.xcconfig"; path = "Target Support Files/Pods-stutters-write-/Pods-stutters-write-.debug.xcconfig"; sourceTree = "<group>"; };
 		83D7139079D45633E9E9B493 /* Pods_stutters_write__stutters_write_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stutters_write__stutters_write_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A54D17AF24B9B79C006EF04D /* SaveFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFormat.swift; sourceTree = "<group>"; };
 		A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
 		A56F3F0124B2DE6100F441A8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				A56F3F0624B43C0500F441A8 /* NotationProperty.swift */,
+				A54D17AF24B9B79C006EF04D /* SaveFormat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				A56F3F0424B2E6D800F441A8 /* ResultViewController.swift in Sources */,
 				A56F3F0724B43C0500F441A8 /* NotationProperty.swift in Sources */,
 				A586D92C24B0C82E0005E44C /* InputViewController.swift in Sources */,
+				A54D17B024B9B79C006EF04D /* SaveFormat.swift in Sources */,
 				A586D8F924B0C16F0005E44C /* AppDelegate.swift in Sources */,
 				A5B5AD0424B55BB5002D0ACB /* SaveFolderViewController.swift in Sources */,
 				A5B5AD0724B6F49D002D0ACB /* TableViewCell.swift in Sources */,
