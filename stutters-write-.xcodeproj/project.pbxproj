@@ -13,6 +13,8 @@
 		A54D17B524BA62FA006EF04D /* SettingViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54D17B324BA62FA006EF04D /* SettingViewCell.xib */; };
 		A54D17B724BA6649006EF04D /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54D17B624BA6649006EF04D /* SettingViewController.swift */; };
 		A5606A1824B2BA9A00C661CD /* PlaceHolderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */; };
+		A5613F5D24BD715F00231C1F /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5613F5C24BD715F00231C1F /* FAQViewController.swift */; };
+		A5613F6224BD746200231C1F /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5613F6124BD746200231C1F /* ContactViewController.swift */; };
 		A56F3F0224B2DE6100F441A8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0124B2DE6100F441A8 /* UIColor+.swift */; };
 		A56F3F0424B2E6D800F441A8 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */; };
 		A56F3F0724B43C0500F441A8 /* NotationProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56F3F0624B43C0500F441A8 /* NotationProperty.swift */; };
@@ -59,6 +61,8 @@
 		A54D17B324BA62FA006EF04D /* SettingViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewCell.xib; sourceTree = "<group>"; };
 		A54D17B624BA6649006EF04D /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		A5606A1724B2BA9A00C661CD /* PlaceHolderTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTextView.swift; sourceTree = "<group>"; };
+		A5613F5C24BD715F00231C1F /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
+		A5613F6124BD746200231C1F /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		A56F3F0124B2DE6100F441A8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		A56F3F0624B43C0500F441A8 /* NotationProperty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotationProperty.swift; sourceTree = "<group>"; };
@@ -157,6 +161,33 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		A5613F5E24BD73FE00231C1F /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				A586D92B24B0C82E0005E44C /* InputViewController.swift */,
+				A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */,
+			);
+			path = Write;
+			sourceTree = "<group>";
+		};
+		A5613F5F24BD741700231C1F /* Saves */ = {
+			isa = PBXGroup;
+			children = (
+				A5B5AD0324B55BB5002D0ACB /* SaveFolderViewController.swift */,
+			);
+			path = Saves;
+			sourceTree = "<group>";
+		};
+		A5613F6024BD742C00231C1F /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A54D17B624BA6649006EF04D /* SettingViewController.swift */,
+				A5613F5C24BD715F00231C1F /* FAQViewController.swift */,
+				A5613F6124BD746200231C1F /* ContactViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		A56F3F0524B43BE100F441A8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,10 +255,9 @@
 		A586D92824B0C5850005E44C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A586D92B24B0C82E0005E44C /* InputViewController.swift */,
-				A56F3F0324B2E6D800F441A8 /* ResultViewController.swift */,
-				A5B5AD0324B55BB5002D0ACB /* SaveFolderViewController.swift */,
-				A54D17B624BA6649006EF04D /* SettingViewController.swift */,
+				A5613F5E24BD73FE00231C1F /* Write */,
+				A5613F5F24BD741700231C1F /* Saves */,
+				A5613F6024BD742C00231C1F /* Settings */,
 				A54D17B124BA62C7006EF04D /* Cell */,
 			);
 			path = Controller;
@@ -439,9 +469,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A56F3F0424B2E6D800F441A8 /* ResultViewController.swift in Sources */,
+				A5613F6224BD746200231C1F /* ContactViewController.swift in Sources */,
 				A56F3F0724B43C0500F441A8 /* NotationProperty.swift in Sources */,
 				A586D92C24B0C82E0005E44C /* InputViewController.swift in Sources */,
 				A586D8F924B0C16F0005E44C /* AppDelegate.swift in Sources */,
+				A5613F5D24BD715F00231C1F /* FAQViewController.swift in Sources */,
 				A5B5AD0424B55BB5002D0ACB /* SaveFolderViewController.swift in Sources */,
 				A5B5AD0724B6F49D002D0ACB /* TableViewCell.swift in Sources */,
 				A586D8FB24B0C16F0005E44C /* SceneDelegate.swift in Sources */,
