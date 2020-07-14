@@ -9,18 +9,11 @@
 import Foundation
 
 struct NotationProperty {
-    var color: StringColor
-    var save: Bool
+    var color: String
+    var text: String
 
     init() {
-        color = .white
-        save = true
+        color = "white"
+        text = ""
     }
-}
-
-
-enum StringColor {
-    case white
-    case black
-    
 }

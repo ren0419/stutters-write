@@ -11,7 +11,7 @@ import UIKit
 class ResultViewController: UIViewController {
     @IBOutlet private weak var contentView: UIView!
     var resultText: String?
-    var stringColor: StringColor?
+    var stringColor: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +28,27 @@ class ResultViewController: UIViewController {
         displayLabel.numberOfLines = 0
         displayLabel.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
         displayLabel.text = resultText
-        self.view.backgroundColor = UIColor.primary
-        contentView.backgroundColor = UIColor.primary
-        displayLabel.backgroundColor = UIColor.primary
+        
         
         switch stringColor {
-        case .white:
-            displayLabel.textColor = UIColor.white
-        case .black:
-            displayLabel.textColor = UIColor.black
-        case .none:
-            return
+        case "white":
+            displayLabel.textColor = .black
+            self.view.backgroundColor = .white
+            contentView.backgroundColor = .white
+            displayLabel.backgroundColor = .white
+        case "gWhite":
+            displayLabel.textColor = .white
+            self.view.backgroundColor = .primary
+            contentView.backgroundColor = .primary
+            displayLabel.backgroundColor = .primary
+        case "gBlack":
+            displayLabel.textColor = .black
+            self.view.backgroundColor = .primary
+            contentView.backgroundColor = .primary
+            displayLabel.backgroundColor = .primary
+        default:
+            break
+        
         }
         contentView.addSubview(displayLabel)
 
