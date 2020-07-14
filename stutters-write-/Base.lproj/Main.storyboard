@@ -80,18 +80,33 @@
         <!--その他-->
         <scene sceneID="92V-5B-3ha">
             <objects>
-                <viewController id="8Km-07-3ul" sceneMemberID="viewController">
+                <viewController id="8Km-07-3ul" customClass="SettingViewController" customModule="stutters_write_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OgW-Ra-wfO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c8L-cD-jtv">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="c8L-cD-jtv" firstAttribute="top" secondItem="nac-Du-bH2" secondAttribute="top" id="J9X-zR-5tp"/>
+                            <constraint firstItem="c8L-cD-jtv" firstAttribute="trailing" secondItem="nac-Du-bH2" secondAttribute="trailing" id="LrG-cp-yRh"/>
+                            <constraint firstItem="c8L-cD-jtv" firstAttribute="bottom" secondItem="nac-Du-bH2" secondAttribute="bottom" id="ZfT-wz-NHe"/>
+                            <constraint firstItem="c8L-cD-jtv" firstAttribute="leading" secondItem="nac-Du-bH2" secondAttribute="leading" id="uPS-wW-uDG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="nac-Du-bH2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="その他" image="envelope.fill" catalog="system" id="TWU-OL-EG6"/>
+                    <connections>
+                        <outlet property="tableView" destination="c8L-cD-jtv" id="Tef-9X-aSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di7-Uf-TVS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3400" y="1434"/>
+            <point key="canvasLocation" x="3400.0000000000005" y="1433.7053571428571"/>
         </scene>
         <!--メッセージ生成-->
         <scene sceneID="46N-mI-yLT">
