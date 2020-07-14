@@ -15,6 +15,8 @@ class InputViewController: UIViewController {
     @IBOutlet private weak var whiteButton: UIButton!
     @IBOutlet private weak var blackButton: UIButton!
     @IBOutlet private weak var saveSwitch: UISwitch!
+    @IBOutlet private weak var bWhiteButton: UIButton!
+    @IBOutlet private weak var bGreenButton: UIButton!
     var property = NotationProperty()
     var userDefaults = UserDefaults.standard
     
@@ -35,15 +37,46 @@ class InputViewController: UIViewController {
         whiteButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         blackButton.layer.cornerRadius = 10.0
         blackButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
-
+        bWhiteButton.layer.cornerRadius = 10.0
+        bWhiteButton.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        bWhiteButton.layer.borderWidth = 0.2
+        bGreenButton.layer.cornerRadius = 10.0
+        bGreenButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        
     }
+    
+    
+    @IBAction func onTapBackWhite(_ sender: Any) {
+        bWhiteButton.layer.borderWidth = 1.5
+        bGreenButton.layer.borderWidth = 0
+        bWhiteButton.isEnabled = false
+        bGreenButton.isEnabled = true
+        whiteButton.backgroundColor = .notPrimary
+        blackButton.backgroundColor = .white
+        blackButton.layer.borderWidth = 1.5
+        blackButton.isEnabled = false
+        whiteButton.isEnabled = false
+    }
+    
+    @IBAction func onTapBackGreen(_ sender: Any) {
+        bGreenButton.layer.borderWidth = 1.5
+        bWhiteButton.layer.borderWidth = 0.2
+        bGreenButton.isEnabled = false
+        bWhiteButton.isEnabled = true
+        whiteButton.isEnabled = true
+        blackButton.isEnabled = true
+        whiteButton.backgroundColor = .primary
+        blackButton.backgroundColor = .notPrimary
+        blackButton.layer.borderWidth = 0
+    }
+    
     
     
     @IBAction func onTapWhite(_ sender: Any) {
         whiteButton.isEnabled = false
         blackButton.isEnabled = true
-        whiteButton.backgroundColor = UIColor.primary
-        blackButton.backgroundColor = UIColor.notPrimary
+        whiteButton.backgroundColor = .primary
+        blackButton.backgroundColor = .notPrimary
         property.color = .white
         property.save = true
     }
@@ -52,8 +85,8 @@ class InputViewController: UIViewController {
     @IBAction func onTapBlack(_ sender: Any) {
         whiteButton.isEnabled = true
         blackButton.isEnabled = true
-        whiteButton.backgroundColor = UIColor.notPrimary
-        blackButton.backgroundColor = UIColor.primary
+        whiteButton.backgroundColor = .notPrimary
+        blackButton.backgroundColor = .primary
         property.color = .black
         property.save = false
     }
