@@ -6,7 +6,8 @@ target 'stutters-write-' do
   use_frameworks!
 
   # Pods for stutters-write-
-  
+   pod 'Firebase/Database'
+
     target 'stutters-write-Tests' do
     inherit! :search_paths
     # Pods for testing

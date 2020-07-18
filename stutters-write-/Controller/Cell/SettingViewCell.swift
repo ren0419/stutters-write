@@ -12,6 +12,7 @@ class SettingViewCell: UITableViewCell {
     
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var settingLabel: UILabel!
+    @IBOutlet weak var arrowImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

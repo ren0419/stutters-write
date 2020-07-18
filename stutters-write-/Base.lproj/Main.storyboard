@@ -71,6 +71,7 @@
                     <tabBarItem key="tabBarItem" tag="1" title="フォルダ" image="folder.fill" catalog="system" selectedImage="folder.fill" id="DJK-YA-AXk"/>
                     <connections>
                         <outlet property="tableView" destination="dkn-N0-I0E" id="ddw-dX-Klp"/>
+                        <segue destination="Fn0-Ie-kdF" kind="presentation" identifier="SaveToResult" id="iwb-vr-ADx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Q1-Bv-uJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,25 +125,64 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-4G-nK8">
-                                <rect key="frame" x="38" y="227" width="331" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yY7-4G-nK8">
+                                <rect key="frame" x="30" y="228" width="354" height="68"/>
                                 <string key="text">この画面から匿名で開発者に改善・要望案を送信することができます。
 可能な限り対応したいと思いますので、ぜひ声をお聞かせください！</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cYT-Mf-zRL" customClass="PlaceHolderTextView" customModule="stutters_write_" customModuleProvider="target">
+                                <rect key="frame" x="30" y="336" width="354" height="208"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="IHv-sk-3dY"/>
+                                </constraints>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="タップしてご記入下さい"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZB-5L-suQ">
+                                <rect key="frame" x="125" y="604" width="164" height="55"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="mVi-YA-M9X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <state key="normal" title="送信">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTapSend:" destination="m57-ms-FeA" eventType="touchUpInside" id="ZNb-Wt-ycB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="3R3-uV-nRV" firstAttribute="trailing" secondItem="cYT-Mf-zRL" secondAttribute="trailing" constant="30" id="0h4-PE-Scc"/>
                             <constraint firstItem="3R3-uV-nRV" firstAttribute="trailing" secondItem="ml2-OV-ide" secondAttribute="trailing" constant="100" id="6fa-5s-cCh"/>
+                            <constraint firstItem="3R3-uV-nRV" firstAttribute="trailing" secondItem="yY7-4G-nK8" secondAttribute="trailing" constant="30" id="88L-qe-Mfy"/>
+                            <constraint firstItem="cYT-Mf-zRL" firstAttribute="top" secondItem="yY7-4G-nK8" secondAttribute="bottom" constant="40" id="CMl-cZ-sPf"/>
+                            <constraint firstItem="3R3-uV-nRV" firstAttribute="trailing" secondItem="cZB-5L-suQ" secondAttribute="trailing" constant="125" id="JLx-zr-kPW"/>
+                            <constraint firstItem="cZB-5L-suQ" firstAttribute="top" secondItem="cYT-Mf-zRL" secondAttribute="bottom" constant="60" id="PGc-yd-JMo"/>
                             <constraint firstItem="ml2-OV-ide" firstAttribute="top" secondItem="3R3-uV-nRV" secondAttribute="top" constant="50" id="WNp-LP-K5Q"/>
+                            <constraint firstItem="yY7-4G-nK8" firstAttribute="top" secondItem="ml2-OV-ide" secondAttribute="bottom" constant="70" id="aWw-9x-huM"/>
                             <constraint firstItem="ml2-OV-ide" firstAttribute="leading" secondItem="3R3-uV-nRV" secondAttribute="leading" constant="100" id="b4h-gA-VAb"/>
+                            <constraint firstItem="cZB-5L-suQ" firstAttribute="centerX" secondItem="cYT-Mf-zRL" secondAttribute="centerX" id="uRV-vD-QhP"/>
+                            <constraint firstItem="cYT-Mf-zRL" firstAttribute="leading" secondItem="3R3-uV-nRV" secondAttribute="leading" constant="30" id="w3C-fy-717"/>
+                            <constraint firstItem="yY7-4G-nK8" firstAttribute="leading" secondItem="3R3-uV-nRV" secondAttribute="leading" constant="30" id="w4F-E7-B3e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3R3-uV-nRV"/>
                     </view>
                     <navigationItem key="navigationItem" id="0EG-H7-eZr"/>
+                    <connections>
+                        <outlet property="sendButton" destination="cZB-5L-suQ" id="gAx-Nq-llS"/>
+                        <outlet property="textView" destination="cYT-Mf-zRL" id="ZC9-Jm-6Au"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHi-bE-CxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -368,7 +408,7 @@
         <!--Result View Controller-->
         <scene sceneID="nCf-DV-N5z">
             <objects>
-                <viewController id="Fn0-Ie-kdF" customClass="ResultViewController" customModule="stutters_write_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Fn0-Ie-kdF" customClass="ResultViewController" customModule="stutters_write_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qme-ou-gjC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,6 +436,9 @@
             <point key="canvasLocation" x="4507" y="-3"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="iwb-vr-ADx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="envelope.fill" catalog="system" width="128" height="93"/>
         <image name="folder.fill" catalog="system" width="128" height="95"/>

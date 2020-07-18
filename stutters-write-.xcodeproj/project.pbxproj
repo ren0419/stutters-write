@@ -30,6 +30,7 @@
 		A5B5AD0424B55BB5002D0ACB /* SaveFolderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B5AD0324B55BB5002D0ACB /* SaveFolderViewController.swift */; };
 		A5B5AD0724B6F49D002D0ACB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B5AD0524B6F49D002D0ACB /* TableViewCell.swift */; };
 		A5B5AD0824B6F49D002D0ACB /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5B5AD0624B6F49D002D0ACB /* TableViewCell.xib */; };
+		A5E2C25524C2B20E00F6FC7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5E2C25424C2B20E00F6FC7A /* GoogleService-Info.plist */; };
 		E372C2DC4B3D5B843E938F11 /* Pods_stutters_write_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0044E57610D1917610E75FCD /* Pods_stutters_write_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,7 @@
 		A5B5AD0324B55BB5002D0ACB /* SaveFolderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveFolderViewController.swift; sourceTree = "<group>"; };
 		A5B5AD0524B6F49D002D0ACB /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A5B5AD0624B6F49D002D0ACB /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		A5E2C25424C2B20E00F6FC7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ACDFC2041CF219CA33980D4C /* Pods-stutters-write-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write-Tests.release.xcconfig"; path = "Target Support Files/Pods-stutters-write-Tests/Pods-stutters-write-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E34617FA77BE22DDAECD690D /* Pods_stutters_write_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_stutters_write_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE906B83C035BF7114B7BBF3 /* Pods-stutters-write--stutters-write-UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stutters-write--stutters-write-UITests.release.xcconfig"; path = "Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				A586D90124B0C1700005E44C /* Assets.xcassets */,
 				A586D90324B0C1700005E44C /* LaunchScreen.storyboard */,
 				A586D90624B0C1700005E44C /* Info.plist */,
+				A5E2C25424C2B20E00F6FC7A /* GoogleService-Info.plist */,
 				A5606A1924B2BB7A00C661CD /* Extension */,
 				A56F3F0524B43BE100F441A8 /* Model */,
 				A586D92824B0C5850005E44C /* Controller */,
@@ -274,6 +277,7 @@
 				A586D8F124B0C16F0005E44C /* Sources */,
 				A586D8F224B0C16F0005E44C /* Frameworks */,
 				A586D8F324B0C16F0005E44C /* Resources */,
+				AFB76171878C8AD323045CCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +315,7 @@
 				A586D91224B0C1700005E44C /* Sources */,
 				A586D91324B0C1700005E44C /* Frameworks */,
 				A586D91424B0C1700005E44C /* Resources */,
+				10B1A23DA580C1D233756075 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,6 +380,7 @@
 				A5B5AD0824B6F49D002D0ACB /* TableViewCell.xib in Resources */,
 				A586D90224B0C1700005E44C /* Assets.xcassets in Resources */,
 				A586D90024B0C16F0005E44C /* Main.storyboard in Resources */,
+				A5E2C25524C2B20E00F6FC7A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +401,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		10B1A23DA580C1D233756075 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stutters-write--stutters-write-UITests/Pods-stutters-write--stutters-write-UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		54E9E821081386EBAA1F4CB0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,6 +460,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFB76171878C8AD323045CCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write-/Pods-stutters-write--frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-stutters-write-/Pods-stutters-write--frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-stutters-write-/Pods-stutters-write--frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FEDFC4AFBE1C66E5083E16C3 /* [CP] Check Pods Manifest.lock */ = {

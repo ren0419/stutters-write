@@ -12,6 +12,8 @@ class SaveFolderViewController: UIViewController {
 
     @IBOutlet private weak var tableView: UITableView!
     var saves: [[String]] = [[]]
+    var postString: String?
+    var postColor: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +43,7 @@ extension SaveFolderViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell") as! TableViewCell
-//        cell.dataSet(displayText: saves[indexPath.row].)
+        cell.dataSet(displayText: saves[indexPath.row][0])
         cell.selectionStyle = .none
         return cell
     }
@@ -56,6 +58,23 @@ extension SaveFolderViewController: UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath as IndexPath], with: .automatic)
             UserDefaults.standard.set(saves, forKey: "saves")
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       postString = saves[indexPath.row][0]
+        postColor = saves[indexPath.row][1]
+        performSegue(withIdentifier: "SaveToResult", sender: nil)
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "SaveToResult") {
+            guard let resultVC = segue.destination as? ResultViewController else {
+                return
+            }
+        resultVC.resultText = postString
+        resultVC.stringColor = postColor
+    }
     }
     
 }
