@@ -23,6 +23,11 @@ class InputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        guard (userDefaults.array(forKey: "saves") as? [[String]]) != nil else {
+            let initData = [["はじめまして","white"]]
+            userDefaults.set(initData, forKey: "saves")
+            return
+        }
     }
     
     func initView() {
@@ -121,7 +126,7 @@ class InputViewController: UIViewController {
         let text = textView.text ?? ""
         let saveData = [text, colorProperty]
         if saveSwitch.isOn {
-        var saves = userDefaults.array(forKey: "saves") as? [[String]] 
+        var saves = userDefaults.array(forKey: "saves") as? [[String]]
         saves?.append(saveData)
         userDefaults.set(saves, forKey: "saves")
         }
