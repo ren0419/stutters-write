@@ -28,7 +28,11 @@ class SaveFolderViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        saves = UserDefaults.standard.array(forKey: "saves") as? [[String]] ?? [[]]
+        guard let saveData = UserDefaults.standard.array(forKey: "saves") as? [[String]] else {
+            saves = [["はじめまして","white"]]
+            return
+        }
+        saves = saveData
         self.tableView.reloadData()
     }
 
