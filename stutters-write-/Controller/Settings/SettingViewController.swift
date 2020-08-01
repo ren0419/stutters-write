@@ -29,6 +29,7 @@ class SettingViewController: UIViewController {
 }
 
 extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
@@ -48,6 +49,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
         case 2: //バージョン表記
                 cell.settingLabel.text = "バージョン v1.0.0"
                 cell.iconImageView.image = UIImage(systemName: "square.grid.2x2.fill")
+                cell.arrowImageView.isHidden = true
         default:
             break
         }
@@ -66,7 +68,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 25
     }
     
     

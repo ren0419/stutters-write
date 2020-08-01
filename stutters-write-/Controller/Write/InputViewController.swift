@@ -17,12 +17,17 @@ class InputViewController: UIViewController {
     @IBOutlet private weak var saveSwitch: UISwitch!
     @IBOutlet private weak var bWhiteButton: UIButton!
     @IBOutlet private weak var bGreenButton: UIButton!
-    var property = NotationProperty()
+    var colorProperty: String = "white"
     var userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
+        guard (userDefaults.array(forKey: "saves") as? [[String]]) != nil else {
+            let initData = [["はじめまして","white"]]
+            userDefaults.set(initData, forKey: "saves")
+            return
+        }
     }
     
     func initView() {
@@ -43,6 +48,16 @@ class InputViewController: UIViewController {
         bGreenButton.layer.cornerRadius = 10.0
         bGreenButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
+        bWhiteButton.layer.borderWidth = 1.5
+        bGreenButton.layer.borderWidth = 0
+        bWhiteButton.isEnabled = false
+        bGreenButton.isEnabled = true
+        whiteButton.backgroundColor = .notPrimary
+        blackButton.backgroundColor = .white
+        blackButton.layer.borderWidth = 1.5
+        blackButton.isEnabled = false
+        whiteButton.isEnabled = false
+        
     }
     
     
@@ -53,9 +68,11 @@ class InputViewController: UIViewController {
         bGreenButton.isEnabled = true
         whiteButton.backgroundColor = .notPrimary
         blackButton.backgroundColor = .white
+        whiteButton.layer.borderWidth = 0
         blackButton.layer.borderWidth = 1.5
         blackButton.isEnabled = false
         whiteButton.isEnabled = false
+        colorProperty = "white"
     }
     
     @IBAction func onTapBackGreen(_ sender: Any) {
@@ -66,8 +83,11 @@ class InputViewController: UIViewController {
         whiteButton.isEnabled = true
         blackButton.isEnabled = true
         whiteButton.backgroundColor = .primary
+        whiteButton.layer.borderWidth = 1.5
+        blackButton.layer.borderWidth = 0
         blackButton.backgroundColor = .notPrimary
         blackButton.layer.borderWidth = 0
+        colorProperty = "gWhite"
     }
     
     
@@ -77,8 +97,9 @@ class InputViewController: UIViewController {
         blackButton.isEnabled = true
         whiteButton.backgroundColor = .primary
         blackButton.backgroundColor = .notPrimary
-        property.color = .white
-        property.save = true
+        whiteButton.layer.borderWidth = 1.5
+        blackButton.layer.borderWidth = 0
+        colorProperty = "gWhite"
     }
     
     
@@ -87,8 +108,9 @@ class InputViewController: UIViewController {
         blackButton.isEnabled = true
         whiteButton.backgroundColor = .notPrimary
         blackButton.backgroundColor = .primary
-        property.color = .black
-        property.save = false
+        whiteButton.layer.borderWidth = 0
+        blackButton.layer.borderWidth = 1.5
+        colorProperty = "gBlack"
     }
     
     @IBAction func onTapDisplayButton(_ sender: Any) {
@@ -101,18 +123,17 @@ class InputViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let text = textView.text
-        
+        let text = textView.text ?? ""
+        let saveData = [text, colorProperty]
         if saveSwitch.isOn {
-        var saves = userDefaults.array(forKey: "saves") as? [String] ?? []
-        saves.append(textView.text)
+        var saves = userDefaults.array(forKey: "saves") as? [[String]]
+        saves?.append(saveData)
         userDefaults.set(saves, forKey: "saves")
         }
         
         let resultVC = segue.destination as! ResultViewController
         resultVC.resultText = text
-        resultVC.stringColor = property.color
-
+        resultVC.stringColor = colorProperty
     }
     
 }
